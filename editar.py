@@ -65,13 +65,22 @@ while True:
     opcao=input("escolha uma das opções acima:  ")
     
     if opcao == 1:
+        nome=input("Digite o nome do cliente:  ")
+        telefone=input("Digite o telefone do cliente:  ")
+        email=input("Digite o email do cliente:  ")
+        cadastrar_clientes(pessoas,nome,telefone,email)
         
         
     elif opcao==2:
+        imprimir_Pessoa(pessoas, email)
         
     elif opcao==3:
+        email=input("Digite o email do cliente desejado:  ")
+        atualizar_linha(pessoas,email)
         
     elif opcao==4:
+        email=input("Digite o email do cliente:  ")
+        excluir_pessoa(pessoas, email)
     
     elif opcao==5:
         
