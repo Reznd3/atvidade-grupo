@@ -45,6 +45,14 @@ def excluir_pessoa(pessoas, email):
     else:
         print("Esta pessoa não esta registrada")
 
+def imprimir_Pessoa(pessoas, email):
+    for pessoa in pessoas:
+        if pessoa['Email'] == email:
+            print (pessoa['Nome'])
+            print(telefone['Telefone'])
+            print(email)
+            break
+
    
 while True:
     
