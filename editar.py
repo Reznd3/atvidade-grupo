@@ -44,3 +44,30 @@ def excluir_pessoa(pessoas, email):
         print(f"A pessoa com o email {email} foi excluída.")
     else:
         print("Esta pessoa não esta registrada")
+
+   
+while True:
+    
+    print("1 - cadastrar")
+    print("2 - imprimir")
+    print("3 - editar linha")    
+    print("4 - excluir linha")
+    print("5 - sair do programa")
+    
+    opcao=input("escolha uma das opções acima:  ")
+    
+    if opcao == 1:
+        
+        
+    elif opcao==2:
+        
+    elif opcao==3:
+        
+    elif opcao==4:
+    
+    elif opcao==5:
+        
+        break
+    else:
+        
+        print("opcao invalida")
