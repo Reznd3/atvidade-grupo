@@ -1,3 +1,16 @@
+import csv
+def cadastrar_clientes(pessoas,nome,telefone,email):
+    pessoa = {
+        'Nome': nome,
+        'Telefone': telefone,
+        'Email': email
+    }
+    pessoas.append(pessoa)
+    print("Cliente cadastrado com Sucesso!")
+    print("_______________________________")
+    print("\n")
+pessoas=[]
+
 def atualizar_linha(pessoas,email):
     for pessoa in pessoas:   
         if email=='Email':
