@@ -31,7 +31,7 @@ def ler_dados_csv():
         leitor_csv = csv.DictReader(arquivo_csv)
         print(" Nome    |   Telefone    |   Email   ")
         for linha in leitor_csv:
-            print(f"    {pessoa["Nome"]}    |   {pessoa["Telefone"]}    |   {pessoa["Email"]}    ")
+            print(f"    {pessoas['Nome']}    |   {pessoas['Telefone']}    |   {pessoas['Email']}    ")
 
 def excluir_pessoa(pessoas, email):
     pessoa_registrada = None
@@ -45,13 +45,12 @@ def excluir_pessoa(pessoas, email):
     else:
         print("Esta pessoa não esta registrada")
 
-def imprimir_Pessoa(pessoas, email):
+def imprimir_Pessoa(pessoas):
     for pessoa in pessoas:
-        if pessoa['Email'] == email:
-            print (pessoa['Nome'])
-            print(telefone['Telefone'])
-            print(email)
-            break
+        print(pessoa['Nome'])
+        print(pessoa['Telefone'])
+        print(pessoa['Email'])
+
 
    
 while True:
@@ -62,7 +61,7 @@ while True:
     print("4 - excluir linha")
     print("5 - sair do programa")
     
-    opcao=input("escolha uma das opções acima:  ")
+    opcao=int(input("escolha uma das opções acima:  "))
     
     if opcao == 1:
         nome=input("Digite o nome do cliente:  ")
@@ -72,7 +71,7 @@ while True:
         
         
     elif opcao==2:
-        imprimir_Pessoa(pessoas, email)
+        imprimir_Pessoa(pessoas)
         
     elif opcao==3:
         email=input("Digite o email do cliente desejado:  ")
@@ -82,9 +81,5 @@ while True:
         email=input("Digite o email do cliente:  ")
         excluir_pessoa(pessoas, email)
     
-    elif opcao==5:
-        
+    elif opcao ==5:
         break
-    else:
-        
-        print("opcao invalida")
